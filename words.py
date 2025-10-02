@@ -1,8 +1,13 @@
-valid_words = [
-  "aahed", "aalii", "aapas", "aargh", "aarti", "abaca", "abaci", "abacs",
+import random
+
+def random_word():
+    return random.choice(words)
+
+valid_words = {
   "abaft", "abaht", "abaka", "abamp", "aband", "abash", "abask", "abaya",
   "abbas", "abbed", "abbes", "abcee", "abeam", "abear", "abeat", "abeer",
   "abele", "abeng", "abers", "abets", "abeys", "abies", "abius", "abjad",
+  "aahed", "aalii", "aapas", "aargh", "aarti", "abaca", "abaci", "abacs",
   "abjud", "abler", "ables", "ablet", "ablow", "abmho", "abnet", "abohm",
   "aboil", "aboma", "aboon", "abord", "abore", "aborn", "abram", "abray",
   "abrim", "abrin", "abris", "absey", "absit", "abuna", "abune", "abura",
@@ -1568,9 +1573,9 @@ valid_words = [
   "zoppo", "zoril", "zoris", "zorro", "zorse", "zouks", "zowee", "zowie",
   "zulus", "zupan", "zupas", "zuppa", "zurfs", "zuzim", "zygal", "zygon",
   "zymes", "zymic",
-]
+}
 
-words = [
+words = {
   "cigar", "rebut", "sissy", "humph", "awake", "blush", "focal", "evade",
   "naval", "serve", "heath", "dwarf", "model", "karma", "stink", "grade",
   "quiet", "bench", "abate", "feign", "major", "death", "fresh", "crust",
@@ -1860,4 +1865,4 @@ words = [
   "eclat", "fella", "gaily", "harry", "hasty", "hydro", "liege", "octal",
   "ombre", "payer", "sooth", "unset", "unlit", "vomit", "fanny", "fetus",
   "butch", "stalk", "flack", "widow", "augur",
-]
+}
