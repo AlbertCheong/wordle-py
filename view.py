@@ -11,7 +11,7 @@ def render_title():
         Tile("E", TileColor.UNKNOWN, True),
     ]
     lines = [" ".join(tile.lines[i] for tile in title) for i in range(3)]
-    return [f"\x1b[40G{line}" for line in lines]
+    return [f"\x1b[47G{line}" for line in lines]
     
 def render_help():
     return "\n\x1b[8Cctrl+c - quit\x1b[4Center - submit word\x1b[4Cbackspace - remove last"
@@ -27,9 +27,9 @@ def render_board():
 def render_keyboard():
     rows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"]
     keyboard = []
-    for row in rows:
+    for i, row in enumerate(rows):
         keys = [Tile(char, TileColor.UNKNOWN, True) for char in row]
-        lines = [" ".join(tile.lines[i] for tile in keys) for i in range(3)]
+        lines = [f"\x1b[{5 + 3 * i}C" + (" ".join(tile.lines[j] for tile in keys)) for j in range(3)]
         keyboard += lines
     return keyboard
 
